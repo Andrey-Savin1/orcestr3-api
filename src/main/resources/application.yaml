@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: orcestr3-api
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/master
+          jwk-set-uri: http://localhost:8080/realms/master/protocol/openid-connect/certs
+
+
+keycloak:
+  realm: master
+  auth-server-url: http://localhost:8080/
+  client-id: my-app
+  username: admin@example.com
+  password: '0000'
+  credentials:
+    secret: IKNMPbG8i2vxhsxc62E4ADP1hFPEs2yx
+
+#springdoc: http://localhost:8081/webjars/swagger-ui/index.html#/
+
